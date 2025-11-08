@@ -89,8 +89,7 @@ def sincroniza(archivo: str, prefix: str) -> None:
 
 
 for elemento in [
-    ("", ""),
-    ("cursos", "../")
+    ("", "")    # si hubiera HTMLs en subcarpetas: ("cursos", "../"), ("cursos/curso1", "../../"), etc.
 ]:    # carpetas a sincronizar (HTMLs) + prefijo referencias
     carpeta, prefijo = elemento
     carpeta_full = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), carpeta)
